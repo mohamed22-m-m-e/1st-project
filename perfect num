@@ -1,0 +1,27 @@
+namespace elprofessor
+{
+    internal class Program
+    {
+     static void Main(string[]  args)
+        {
+            int i, j, sum;
+            Console.WriteLine("enter the startnum");
+            int StartNum = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter the endnum");
+            int EndNum = int.Parse(Console.ReadLine());
+            Console.WriteLine("perfect numbers between {0} and {1} are : ", StartNum,EndNum);
+            for (i = StartNum; i <= EndNum; i++)
+            {
+               sum = 0;
+                for (j = 1; j < i; j++)
+                {
+                    if (i % j == 0)
+                        sum = sum + j;
+                }
+                if (sum == i)
+                    Console.WriteLine(i);
+                    }
+             Console.ReadLine();
+        }
+    }
+}
