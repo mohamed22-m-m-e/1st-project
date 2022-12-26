@@ -1,0 +1,33 @@
+namespace elprofessor
+{
+    internal class Program
+    {
+     static void Main(string[]  args)
+        {
+            bool isprime= true;
+            int i, j;
+            Console.WriteLine("enter the startnum");
+            int StartNum = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter the endnum");
+            int EndNum = int.Parse(Console.ReadLine());
+            Console.WriteLine("prime numbers between {0} and {1} are : ", StartNum,EndNum);
+            for (i = StartNum; i <= EndNum; i++)
+            {
+                for (j = 2; j <= EndNum; j++)
+                {
+                    if ((i != j && i % j == 0) || i == 1)
+                    {
+                        isprime = false;
+                        break;
+                    }
+                    }
+                    if (isprime)
+                    {
+                        Console.WriteLine(i);
+                    }
+                    isprime = true;
+                }
+                Console.ReadKey();
+        }
+    }
+}
